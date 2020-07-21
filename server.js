@@ -13,10 +13,6 @@ app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
 });
 
-app.get("/", (req, res) => {
-  res.send("Get words home");
-});
-
 /// start a session with a set of characters and preload possible words
 //query in form of: localhost:3000/start?letters=abcde
 app.get("/start", (req, res) => {
