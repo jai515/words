@@ -1,10 +1,12 @@
 require("dotenv").config();
 const express = require("express");
+const cors = require("cors");
 const app = express();
 const bodyParser = require("body-parser");
 const fetch = require("node-fetch");
 const cheerio = require("cheerio");
 
+app.use(cors());
 app.use(bodyParser.json());
 
 const PORT = process.env.PORT !== undefined ? process.env.PORT : 3000;
